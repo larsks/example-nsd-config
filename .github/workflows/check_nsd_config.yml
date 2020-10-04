@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: run tests
-        uses: larsks/action-check-nsd-config@0.0.1
+        uses: larsks/action-check-nsd-config@master
         with:
           zone_directory: /etc/nsd/zones
           zone_pattern: "*.zone"
