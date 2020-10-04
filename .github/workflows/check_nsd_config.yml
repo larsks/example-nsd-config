@@ -1,0 +1,18 @@
+---
+name: Check NSD configuration
+on:
+  - push
+
+jobs:
+  check_nsd_config:
+    runs-on: ubuntu-latest
+    name: Check NSD configuration
+    steps:
+      - name: check out repository
+        uses: actions/checkout@v2
+
+      - name: run tests
+        uses: larsks/action-check-nsd-config@0.0.1
+        with:
+          zone_directory: /etc/nsd/zones
+          zone_pattern: "*.zone"
